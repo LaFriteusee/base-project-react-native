@@ -21,17 +21,36 @@ class App extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>First App Journault</Text>
+        <View style={styles.row}>
+        <View style={styles.firstsquare}>
+          <Text style={styles.numbersText}>1</Text>
         </View>
-        <View style={styles.clicks}>
-          <TouchableOpacity style={styles.textBtn} onPress={this.onPress}>
-            <Text>Click me</Text>
-          </TouchableOpacity>
-          <View>
-            <Text style={styles.text}>You clicked {this.state.count} times</Text>
-          </View>
+        <View style={styles.secondsquare}>
+          <Text style={styles.numbersText}>2</Text>
         </View>
+        <View style={styles.thirdsquare}>
+          <Text style={styles.numbersText}>3</Text>
+        </View>
+        </View>
+        <View style={styles.row}>
+        <View style={styles.fourthsquare}>
+          <Text style={styles.numbersText}>4</Text>
+        </View>
+        </View>
+        <View style={styles.row}>
+        <View style={styles.fifthsquare}>
+          <Text style={styles.numbersText}>5</Text>
+        </View>
+        </View>
+        <View style={styles.lastrow}> 
+        <View style={styles.sixthsquare}>
+          <Text style={styles.numbersText}>6</Text>
+        </View>
+        <View style={styles.seventhsquare}>
+          <Text style={styles.numbersText}>7</Text>
+        </View>
+        </View>
+        
       </SafeAreaView>
     );
   }
@@ -39,39 +58,84 @@ class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'grey',
+   
     flex: 1,
+  
+  },
+  numbersText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: 'black',
+    
+  },
+
+  row: {
+    flex: 1,
+    flexDirection: 'row',    
+    justifyContent: 'center',
+  
+   
+   
+  },
+
+  lastrow: {
+    flex: 5,
+    flexDirection: 'row',    
+    justifyContent: 'center',
+   
+    
+  },
+  firstsquare: {
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  textBtn: {
-    padding: 10,
-    margin: 10,
+    flex :1,
     backgroundColor: 'cyan',
+  },
+
+  secondsquare: {
     alignItems: 'center',
-    borderRadius: 7,
-    color: 'cyan',
+    justifyContent: 'center',
+    flex:2,
+    backgroundColor: '#FF33D2',
   },
-  titleContainer: {
-    color: 'cyan',
-    flex: 1,
-    marginTop: 10,
+
+  thirdsquare: {
+    alignItems: 'center',
+    justifyContent: 'center',   
+    flex :3,
+    backgroundColor: 'yellow',
   },
-  clicks: {
-    flex: 1,
+
+  fourthsquare: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex :1,
+    backgroundColor: 'red',
   },
-  title: {
-    color: 'cyan',
-    fontSize: 30,
-    textTransform: 'uppercase',
-    fontWeight: '900',
+
+  fifthsquare: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex :1,
+    backgroundColor: '#5EFF33',
   },
-  text: {
-    color: 'cyan',
-    fontSize: 20,
-    textTransform: 'uppercase',
-    fontWeight: '900',
+
+  sixthsquare: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex :1,
+    backgroundColor: 'white',
   },
+
+  seventhsquare: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex :1,
+    backgroundColor: 'blue',
+  },
+
+
 });
 
 export default App;
